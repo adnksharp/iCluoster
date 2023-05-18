@@ -1,0 +1,130 @@
+@font-face {
+  font-family: Hermit;
+  src: url(Hermit-Regular.otf);
+}
+
+:root {
+  --LC: #ffffff;
+  --DC: #000000;
+  --dC: #ff0000;
+}
+
+#display {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  font-family: Hermit;
+  font-size: 22vh;
+  top: 7vh;
+}
+
+#display * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--LC);
+  color: var(--DC);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+img {
+  position: absolute;
+  height: 5vh;
+  right: 0;
+  bottom: 0;
+}
+
+#maps {
+  background: #0000;
+  position: absolute;
+  height: 50vh;
+  width: 80vw;
+  left: 10vw;
+  top: 45vh;
+}
+
+#theme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  outline: none;
+  border: none;
+  background: #ffffff01;
+}
+
+.chart {
+  position: absolute;
+  left: 17vw;
+  top: 5vh;
+  width: 33vh;
+  height: 33vh;
+  border: 3vh solid #0000;
+  border-color: #00000000 var(--LC) var(--LC) #00000000;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+#donut {
+  position: absolute;
+  left: calc(17vw + 1.5vh);
+  top: 6.5vh;
+  width: 30vh;
+  height: 30vh;
+  border: 1vh solid #0000;
+  border-color: #00000000 var(--dC) var(--dC) #00000000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transform: rotate(5deg);
+}
+
+.loader {
+  position: absolute;
+  left: calc(50vw - 5vh);
+  top: calc(70vh - 5vh);
+  width: 10vh;
+  height: 10vh;
+}
+
+.loader:before {
+  content: "";
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1vh solid #0000;
+  border-color: #00000000 var(--dC) var(--dC) #00000000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotate 3s ease-in-out infinite;
+  transform: rotate(15deg);
+}
+
+.loader-i {
+  position: absolute;
+  left: calc(50vw - 7vh);
+  top: calc(70vh - 7vh);
+  width: 13vh;
+  height: 13vh;
+  border: 3vh solid #0000;
+  border-color: #00000000 var(--LC) var(--LC) #00000000;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+@keyframes rotate {
+  35% {
+    transform: rotate(175deg);
+  }
+}

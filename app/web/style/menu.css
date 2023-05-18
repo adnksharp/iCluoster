@@ -1,0 +1,77 @@
+@font-face {
+  font-family: Hermit;
+  src: url(Hermit-Regular.otf);
+}
+
+:root {
+  --LC: #ffffff;
+  --DC: #000000;
+  --dC: #ff0000;
+}
+
+#menu {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 14vh;
+	height: 14vh;
+	border-radius: 0 50% 0 0;
+	background-color: var(--DC);
+	color: var(--LC);
+	font-size: 5vh;
+	transition: 0.5s;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+#menu:hover {
+	animation: colorize 2s;
+}
+
+@keyframes colorize {
+	50% {
+		background-color: var(--dC);
+		color: var(--LC);
+	}
+}
+
+#extra {
+	position: absolute;
+	top: 40vh;
+	left: 10vw;
+	width: 81vw;
+	height: 60vh;
+	display: none;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--LC);
+	color: var(--DC);
+}
+
+#extra div {
+	width: 18vw;
+	height: 15vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#extra i {
+	font-size: 4vh;
+}
+
+#extra h5 {
+	font-size: 8vh;
+	font-family: 'Hermit';
+	margin: 0;
+	padding: 0;
+}
+
+#extra h6 {
+	font-size: 3vh;
+	margin: 0;
+	padding: 0;
+}
